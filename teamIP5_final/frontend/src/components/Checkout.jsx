@@ -62,7 +62,9 @@ const Checkout = ({ cart, setCart, orderHistory, setOrderHistory }) => {
     }
   };  
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const tax = subtotal * 0.07;
+  const total = (subtotal + tax).toFixed(2);
 
   return (
     <div>
@@ -129,7 +131,10 @@ const Checkout = ({ cart, setCart, orderHistory, setOrderHistory }) => {
             </li>
           ))}
         </ul>
-        <h5 className="text-end">Total: ${total}</h5>
+        <h5 className="text-end">Subtotal: ${subtotal.toFixed(2)}</h5>
+        <h5 className="text-end">Tax (7%): ${tax.toFixed(2)}</h5>
+        <h4 className="text-end">Total: ${total}</h4>
+
 
         <div className="text-center mt-4">
           <button className="btn btn-success" onClick={handleSubmit}>Submit Payment</button>

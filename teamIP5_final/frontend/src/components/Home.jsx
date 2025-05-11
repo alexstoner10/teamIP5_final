@@ -41,7 +41,7 @@ const Home = () => {
       {/* Carousel */}
       <Carousel interval={3000} fade>
         <Carousel.Item>
-          <img className="d-block w-100" src={kebab} alt="kebab" style={{ height: "750px", objectFit: "cover", borderRadius: "21px 21px 0 0" }} />
+          <img className="d-block w-100" src={kebab} alt="kebab" style={{ height: "750px", objectFit: "cover"}} />
           <Carousel.Caption className="text-start">
             <h1>Global Bites: Delicious International Meals</h1>
             <p>Explore our diverse menu featuring flavorful dishes from around the world. Check out our pricing and offerings to find your next favorite meal!</p>
@@ -49,7 +49,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={pancake} alt="pancake" style={{ height: "750px", objectFit: "cover", borderRadius: "21px 21px 0 0" }} />
+          <img className="d-block w-100" src={pancake} alt="pancake" style={{ height: "750px", objectFit: "cover"}} />
           <Carousel.Caption>
             <h1>Global Bites: From All Over the World</h1>
             <p>Take a journey through global cuisine with our interactive map! Discover dishes by region and connect with the cultures behind them.</p>
@@ -57,7 +57,7 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={steak} alt="steak" style={{ height: "750px", objectFit: "cover", borderRadius: "21px 21px 0 0" }} />
+          <img className="d-block w-100" src={steak} alt="steak" style={{ height: "750px", objectFit: "cover"}} />
           <Carousel.Caption className="text-end">
             <h1>Global Bites: Blending Worldwide Cultures</h1>
             <p>Dive into the rich history and cultural significance of our menu items. Learn how food connects people and traditions across the globe!</p>

@@ -16,10 +16,7 @@ import Confirmation from './components/Confirmation.jsx';
 import "./App.css"
 
 function App() {
-  const [cart, setCart] = useState([
-    { id: 1, title: "Pizza", price: 10, quantity: 1, image: "./assets/images/pizza.jpg" },
-    { id: 2, title: "Sushi", price: 15, quantity: 2, image: "./assets/images/sushi.jpg" },
-  ]);
+  const [cart, setCart] = useState([]);
 
   const [orderHistory, setOrderHistory] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState(

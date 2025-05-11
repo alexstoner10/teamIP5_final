@@ -13,6 +13,7 @@ app.listen(port, () => {
 });
 
 const { MongoClient } = require("mongodb");
+const { ObjectId } = require("mongodb");
 const url = "mongodb://127.0.0.1:27017";
 const dbName = "secoms3190";
 const client = new MongoClient(url);
@@ -155,3 +156,41 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.post("/menu", async (req, res) => {
+  try {
+    await client.connect();
+    const result = await db.collection("menu").insertOne(req.body);
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send("Failed to add menu item");
+  }
+});
+
+app.put("/menu/:id", async (req, res) => {
+  try {
+    await client.connect();
+    const { id } = req.params;
+    const update = {
+      $set: {
+        product_name: req.body.product_name,
+        description: req.body.description,
+        price: req.body.price
+      }
+    };
+    const result = await db.collection("menu").updateOne({ _id: new ObjectId(id) }, update);
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send("Failed to update menu item");
+  }
+});
+
+app.delete("/menu/:id", async (req, res) => {
+  try {
+    await client.connect();
+    const { id } = req.params;
+    const result = await db.collection("menu").deleteOne({ _id: new ObjectId(id) });
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send("Failed to delete menu item");
+  }
+});
