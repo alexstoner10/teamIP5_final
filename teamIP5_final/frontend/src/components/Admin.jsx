@@ -146,13 +146,6 @@ const Admin = () => {
 
   const [editReviewId, setEditReviewId] = useState(null);
 
-  const handleReviewChange = (event) => {
-    const { name, value } = event.target;
-    setReviewData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
 
   const handleReviewUpdate = async (id) => {
   const url = `http://127.0.0.1:8080/updateReviews/${id}`;
