@@ -68,7 +68,6 @@ const Checkout = ({ cart, setCart, orderHistory, setOrderHistory }) => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-decoration-none text-light" onClick={() => navigate("/")}>Global Bites</button>
@@ -91,7 +90,6 @@ const Checkout = ({ cart, setCart, orderHistory, setOrderHistory }) => {
         </div>
       </nav>
 
-      {/* Checkout Form */}
       <div className="container mt-5">
         <h2 className="text-center mb-4">Checkout</h2>
 
@@ -141,7 +139,6 @@ const Checkout = ({ cart, setCart, orderHistory, setOrderHistory }) => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="container-fluid bg-dark text-light py-4 mt-5">
         <div className="text-center">
           <p className="mb-0">&copy; 2025 Global Bites, Inc. • <a href="#" className="text-light">Back to top</a></p>

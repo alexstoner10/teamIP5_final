@@ -6,7 +6,6 @@ const History = ({ orderHistory }) => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-light" onClick={() => navigate("/")}>
@@ -31,7 +30,6 @@ const History = ({ orderHistory }) => {
         </div>
       </nav>
 
-      {/* Page Content */}
       <div className="container mt-5">
         <h2 className="text-center mb-4">Order History</h2>
 
@@ -83,7 +81,6 @@ const History = ({ orderHistory }) => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="container-fluid bg-dark text-light py-4 mt-5">
         <div className="text-center">
           <p className="mb-0">&copy; 2025 Global Bites, Inc. • <a href="#" className="text-light">Back to top</a></p>

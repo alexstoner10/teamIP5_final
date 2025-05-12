@@ -32,7 +32,6 @@ const Cart = ({ cart, setCart }) => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-decoration-none text-light" onClick={() => navigate("/")}>Global Bites</button>
@@ -55,7 +54,6 @@ const Cart = ({ cart, setCart }) => {
         </div>
       </nav>
 
-      {/* Cart Content */}
       <div className="container mt-5">
         <h2 className="text-center mb-4">Your Cart</h2>
 
@@ -98,7 +96,6 @@ const Cart = ({ cart, setCart }) => {
         <button className="btn btn-link mt-3" onClick={() => navigate("/order-history")}>View Order History</button>
       </div>
 
-      {/* Footer */}
       <footer className="container-fluid bg-dark text-light py-4 mt-5">
         <div className="text-center">
           <p className="mb-0">&copy; 2025 Global Bites, Inc. • <a href="#" className="text-light">Back to top</a></p>
