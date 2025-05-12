@@ -15,7 +15,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-decoration-none text-light" onClick={() => navigate("/")}>Global Bites</button>
@@ -38,7 +37,6 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Carousel */}
       <Carousel interval={3000} fade>
         <Carousel.Item>
           <img className="d-block w-100" src={kebab} alt="kebab" style={{ height: "750px", objectFit: "cover"}} />
@@ -66,7 +64,6 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/* Sections */}
       <div className="container marketing mt-5">
         <hr className="featurette-divider" />
         <div className="row featurette">
@@ -123,7 +120,6 @@ const Home = () => {
         <hr className="featurette-divider" />
       </div>
 
-      {/* Footer */}
       <footer className="container-fluid bg-dark text-light py-4">
         <div className="text-center">
           <p className="mb-0">&copy; 2025 Global Bites, Inc. &#8226; <a href="#" className="text-light">Back to top</a></p>

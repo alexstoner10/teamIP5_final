@@ -15,7 +15,6 @@ const Map = () => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-decoration-none text-light" onClick={() => navigate("/")}>Global Bites</button>
@@ -38,7 +37,6 @@ const Map = () => {
         </div>
       </nav>
 
-      {/* Main Map Section */}
       <div className="container mt-4">
         <h1 className="text-center mb-4">Discover Global Dishes Through Our Interactive Map</h1>
 
@@ -48,7 +46,6 @@ const Map = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* Italy */}
         <Marker position={[41.8719, 12.5674]}>
             <Popup>
             🍕 Italy <br />
@@ -57,7 +54,6 @@ const Map = () => {
             </Popup>
         </Marker>
 
-        {/* Turkey */}
         <Marker position={[38.9637, 35.2433]}>
             <Popup>
             🍢 Turkey <br />
@@ -66,7 +62,6 @@ const Map = () => {
             </Popup>
         </Marker>
 
-        {/* Japan */}
         <Marker position={[36.2048, 138.2529]}>
             <Popup>
             🍣 Japan <br />
@@ -75,7 +70,6 @@ const Map = () => {
             </Popup>
         </Marker>
 
-        {/* Mexico */}
         <Marker position={[23.6345, -102.5528]}>
             <Popup>
             🌮 Mexico <br />
@@ -84,7 +78,6 @@ const Map = () => {
             </Popup>
         </Marker>
 
-        {/* France */}
         <Marker position={[46.2276, 2.2137]}>
             <Popup>
             🥖 France <br />
@@ -94,7 +87,6 @@ const Map = () => {
         </Marker>
         </MapContainer>
       
-        {/* Country Sections */}
         <hr className="featurette-divider" />
         <div className="row featurette">
         <div className="col-md-7">

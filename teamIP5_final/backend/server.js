@@ -194,3 +194,33 @@ app.delete("/menu/:id", async (req, res) => {
     res.status(500).send("Failed to delete menu item");
   }
 });
+
+app.put("/updateReviews/:id", async (req, res) => {
+  try {
+    await client.connect();
+    const { id } = req.params;
+    const update = {
+      $set: {
+        name: req.body.name,
+        rating: req.body.rating,
+        reviewText: req.body.reviewText
+      }
+    };
+    const result = await db.collection("reviews").updateOne({ _id: new ObjectId(id) }, update);
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send("Failed to update review");
+  }
+});
+
+
+app.delete("/deleteReviews/:id", async (req, res) => {
+  try {
+    await client.connect();
+    const { id } = req.params;
+    const result = await db.collection("reviews").deleteOne({ _id: new ObjectId(id) });
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send("Failed to delete review");
+  }
+});

@@ -37,7 +37,6 @@ const Signup = ({ loggedInUser, setLoggedInUser }) => {
     }
 
     if (isLogin) {
-      // Login with backend
       fetch("http://localhost:8080/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -76,7 +75,6 @@ const Signup = ({ loggedInUser, setLoggedInUser }) => {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           <button className="navbar-brand btn btn-link text-decoration-none text-light" onClick={() => navigate("/")}>
@@ -168,7 +166,6 @@ const Signup = ({ loggedInUser, setLoggedInUser }) => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="container-fluid bg-dark text-light py-4">
         <div className="text-center">
           <p className="mb-0">&copy; 2025 Global Bites, Inc. &#8226; <a href="#" className="text-light">Back to top</a></p>
